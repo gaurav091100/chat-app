@@ -1,5 +1,5 @@
-const { genSalt, hash } = require("bcrypt");
-const { default: mongoose } = require("mongoose");
+import { genSalt, hash } from "bcrypt";
+import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     email:{
@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
         type: Number,
         required:false,
     },
-    profile : {
+    profileSetup : {
         type: Boolean,
         default: false
     }
